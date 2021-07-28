@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title></title>
+
+    <script>
+      const global = globalThis
+    </script>
+  </head>
+  <body>
+    <webview id="webview" autosize="on" src="https://www.google.com" data-home="https://www.google.com"></webview>
+    <div id="react-root"></div>
+
+    <!-- <script>
+      onload = () => {
+        window.requestSourceCode = () => {
+          return new Promise((resolve, reject) => {
+            try {
+              const webview = document.querySelector('webview')
+
+              webview
+                .executeJavaScript(
+                  `
+                document.getElementsByTagName('html')[0].innerHTML`
+                )
+                .then((result) => {
+                  resolve(result)
+                })
+            } catch (error) {
+              reject(error)
+            }
+          })
+        }
+
+      }
+    </script> -->
+  </body>
+</html>
